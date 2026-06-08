@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="pt">
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1, user-scalable=no" />
+    <title>Bolachas — apanha as bolachas!</title>
+    <link rel="stylesheet" href="style.css" />
+  </head>
+  <body>
+    <!-- Ecra inicial: escolher nome -->
+    <div id="lobby" class="overlay">
+      <div class="card">
+        <h1>🍪 Bolachas</h1>
+        <p>Numa <strong>cozinha gigante</strong>, a <strong>crianca</strong> (a maior) tem de apanhar todas as bolachas com bracos e pernas. As bolachas fogem e <strong>saltam para cima das bancadas, mesa e armarios</strong> — la em cima a crianca so apanha se saltar tambem!</p>
+        <input id="nameInput" maxlength="14" placeholder="O teu nome" autocomplete="off" required />
+        <p id="nameError" class="hidden">Escreve o teu nome para entrar!</p>
+        <button id="joinBtn">Entrar no jogo</button>
+        <p class="hint">Move-te com as <strong>setas</strong> ou <strong>WASD</strong> e <strong>salta</strong> com a <strong>barra de espaco</strong>. No telemovel usa o joystick e o botao Saltar.</p>
+      </div>
+    </div>
+
+    <!-- Jogo -->
+    <div id="game" class="hidden">
+      <div id="hud">
+        <span id="role"></span>
+        <span id="timer"></span>
+        <span id="alive"></span>
+      </div>
+      <canvas id="canvas"></canvas>
+      <div id="banner" class="hidden"></div>
+      <button id="restartBtn" class="hidden">Jogar outra vez</button>
+      <!-- Joystick para ecra tatil -->
+      <div id="stick" class="hidden">
+        <div id="stickBase"><div id="stickKnob"></div></div>
+      </div>
+      <!-- Botao de saltar (tatil) -->
+      <button id="jumpBtn" class="hidden">⬆<span>Saltar</span></button>
+    </div>
+
+    <script type="module" src="client.js"></script>
+  </body>
+</html>

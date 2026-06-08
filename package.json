@@ -1,0 +1,14 @@
+{
+  "name": "bolachas",
+  "version": "1.0.0",
+  "description": "Jogo multiplayer online: a crianca apanha as bolachas com bracos e pernas",
+  "type": "module",
+  "main": "server/index.js",
+  "scripts": {
+    "start": "node server/index.js",
+    "dev": "node --watch server/index.js"
+  },
+  "dependencies": {
+    "ws": "^8.18.0"
+  }
+}
