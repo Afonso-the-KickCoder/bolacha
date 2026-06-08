@@ -40,6 +40,19 @@ ngrok http 3000
 
 E partilha o endereço gerado.
 
+## Pôr online no Render
+
+O projeto está pronto para o [Render](https://render.com) (suporta WebSockets e processos
+sempre ligados, ao contrário da Vercel). O ficheiro `render.yaml` já tem tudo configurado.
+
+1. Faz push do projeto para o GitHub.
+2. No Render: **New → Blueprint** e escolhe este repositório (ou **New → Web Service**, com
+   `npm install` como *build* e `npm start` como *start*).
+3. O Render atribui um endereço `https://...onrender.com` — partilha-o com os amigos.
+
+> No plano grátis o servidor "adormece" após inatividade; o primeiro acesso pode demorar
+> ~30s a acordar.
+
 ## Como está feito
 
 | Ficheiro            | Papel                                                             |

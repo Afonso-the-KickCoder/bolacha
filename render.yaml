@@ -1,0 +1,12 @@
+# Configuracao de deploy para o Render (https://render.com)
+# Liga o repositorio no Render e ele le este ficheiro automaticamente (Blueprint).
+services:
+  - type: web
+    name: bolachas
+    runtime: node
+    plan: free
+    region: frankfurt # mais perto de Portugal; muda se quiseres (oregon, ohio, singapore...)
+    buildCommand: npm install
+    startCommand: npm start
+    healthCheckPath: /
+    autoDeploy: true
